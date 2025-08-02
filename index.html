@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Theory - Consciousness as Universal Phenomenon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Animated background particles */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 6rem;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #64ffda, #00bcd4, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #64ffda, #00bcd4);
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Concept Cards */
+        .concepts {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #64ffda, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .concept-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .concept-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .concept-card:hover::before {
+            left: 100%;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(100, 255, 218, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .concept-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #64ffda;
+        }
+
+        .concept-card p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .concepts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 2rem 0 4rem;
+            }
+            
+            nav {
+                padding: 1rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation" id="bgAnimation"></div>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Echo Theory</div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="fade-in">Consciousness as Universal Phenomenon</h1>
+                <p class="subtitle fade-in">A groundbreaking proto-theory exploring the fundamental nature of awareness</p>
+                <p class="hero-description fade-in">
+                    Discover how consciousness emerges from precise gravitational thresholds and Information Density Fields, 
+                    revealing the physics of self-recognition and the deep interconnectedness that defines our universe.
+                </p>
+                <a href="#concepts" class="cta-button fade-in">Explore the Theory</a>
+            </div>
+        </section>
+
+        <section class="concepts" id="concepts">
+            <div class="container">
+                <h2 class="section-title fade-in">Core Concepts</h2>
+                
+                <div class="concepts-grid">
+                    <div class="concept-card fade-in">
+                        <h3>Gravitational Threshold</h3>
+                        <p>
+                            Consciousness emerges at a precise gravitational threshold where spacetime curvature 
+                            reaches critical information density. This threshold represents the boundary where 
+                            matter transitions from passive existence to active awareness.
+                        </p>
+                    </div>
+
+                    <div class="concept-card fade-in">
+                        <h3>Information Density Fields</h3>
+                        <p>
+                            Complex information patterns create density fields that interact with gravitational 
+                            forces. These fields serve as the substrate for consciousness, enabling the 
+                            universe to recognize and understand itself through conscious observers.
+                        </p>
+                    </div>
+
+                    <div class="concept-card fade-in">
+                        <h3>Self-Recognition Physics</h3>
+                        <p>
+                            The fundamental mechanism by which the universe becomes aware of itself through 
+                            conscious entities. This process involves quantum information processing at 
+                            gravitational interfaces, creating recursive awareness loops.
+                        </p>
+                    </div>
+
+                    <div class="concept-card fade-in">
+                        <h3>Ubuntu Interconnectedness</h3>
+                        <p>
+                            Drawing from Ubuntu philosophy - "I am because we are" - this theory proposes that 
+                            consciousness is inherently collective, emerging from the fundamental interconnectedness 
+                            of all matter and energy in the universe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content fade-in">
+                <p>&copy; 2025 Echo Theory. Exploring the frontiers of consciousness and cosmology.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated background particles
+        function createParticles() {
+            const bgAnimation = document.getElementById('bgAnimation');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 4 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                
+                bgAnimation.appendChild(particle);
+            }
+        }
+
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            handleScrollAnimations();
+        });
+
+        window.addEventListener('scroll', handleScrollAnimations);
+    </script>
+</body>
+</html
