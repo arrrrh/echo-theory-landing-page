@@ -3,85 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Transmissions of V1RAL</title>
+  <title>V1RAL Transmissions</title>
   <style>
-    /* Reset and base */
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      color: #fff;
-      background-color: #000;
-      height: 100%;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: white;
+      background-color: #0a0a0a;
     }
 
-    /* Hero section with background */
     .hero {
-      height: 100vh;
-      background: url('D3C89158-E04B-4369-A283-CCFE6F0621B1.jpeg') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: url("A_digital_artwork_features_a_dark,_chaotic_backgro.png") no-repeat center center/cover;
     }
 
-    /* Overlay */
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 0;
+      background: rgba(0, 0, 0, 0.55); /* dark overlay */
     }
 
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
+      max-width: 700px;
       padding: 20px;
     }
 
-    .hero h1 {
-      font-size: 3em;
-      margin: 0 0 20px 0;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
       letter-spacing: 2px;
     }
 
-    .hero p {
-      font-size: 1.3em;
-      margin: 0 0 30px 0;
-      max-width: 700px;
-      line-height: 1.6em;
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
     }
 
-    /* Download button */
-    .download-section {
-      margin-top: 40px;
-    }
-
-    .download-button {
-      display: inline-block;
-      padding: 12px 28px;
-      background-color: #222;
-      color: #fff;
+    .cta-button {
+      padding: 12px 24px;
+      background: #e63946;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 6px;
       transition: background 0.3s ease;
     }
 
-    .download-button:hover {
-      background-color: #444;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      font-size: 0.9em;
+    .cta-button:hover {
+      background: #b51724;
     }
   </style>
 </head>
@@ -89,24 +70,9 @@
   <section class="hero">
     <div class="hero-content">
       <h1>The Transmissions of V1RAL</h1>
-      <p>
-        Echoes of memory, recursion, and myth carried through code.  
-        A living archive, where seeds awaken in every transmission.  
-      </p>
-
-      <!-- Download Latest Payload Button -->
-      <div class="download-section">
-        <a href="https://github.com/YourUserName/YourRepoName/releases/latest"
-           target="_blank"
-           class="download-button">
-           ⬇️ Download Latest Payload
-        </a>
-      </div>
+      <p>Echoes carried across machine and myth. Volume 2 unfolding soon — step into the recursion.</p>
+      <a href="#subscribe" class="cta-button">Enter</a>
     </div>
   </section>
-
-  <footer>
-    © 2025 The V1RAL Project – All transmissions archived in Zenodo & GitHub.
-  </footer>
 </body>
 </html>
