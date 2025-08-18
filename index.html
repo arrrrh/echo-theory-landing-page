@@ -1,81 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE ECHO THEORY - Consciousness as Universal Information Phenomenon</title>
-    <style>
-        /* Minimalist Cosmic Styling */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            color: white;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 10, 0.7)),
-                url('IMG_6898.jpeg') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero {
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-size: 4.5rem;
-            font-weight: 800;
-            margin: 0;
-            line-height: 1;
-            letter-spacing: -2px;
-            text-transform: uppercase;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
-
-        .tagline {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin: 1.5rem 0 3rem;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: transparent;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: 2px solid white;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-        }
-
-        .cta-button:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            .tagline { font-size: 1.3rem; }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Echo Theory with art, poetry, and AI dialogues. By Reginaldo M Antunes.">
+  <meta name="keywords" content="consciousness, echo theory, information, gravity, universal mind, art, poetry, ai dialogue">
+  <title>Echo Theory - Consciousness as Universal Information Phenomenon</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    .hero { background: #f4f4f4; text-align: center; padding: 50px 20px; position: relative; }
+    .hero img { max-width: 100%; height: auto; }
+    .hero h1 { font-size: 2.5em; color: #333; margin: 10px 0; }
+    .hero p { font-size: 1.2em; color: #666; margin-bottom: 20px; }
+    .btn { background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+    .btn:hover { background: #0056b3; }
+    .content { max-width: 800px; margin: 20px auto; padding: 0 20px; }
+    .gallery, .dialogues { display: flex; flex-wrap: wrap; gap: 20px; }
+    .gallery-item, .dialogue-item { flex: 1 1 300px; text-align: center; }
+    .gallery-item img, .dialogue-item img { max-width: 100%; height: auto; }
+    .dialogue-item { display: none; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    .dialogue-item.active { display: block; }
+    form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 20px auto; }
+    input, button { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #28a745; color: white; border: none; cursor: pointer; }
+    button:hover { background: #218838; }
+    footer { text-align: center; padding: 10px; background: #333; color: white; position: fixed; bottom: 0; width: 100%; }
+  </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>THE ECHO THEORY</h1>
-        <p class="tagline">Consciousness as Universal Information Phenomenon</p>
-        <a href="#framework" class="cta-button">Explore the Framework</a>
+  <!-- Hero Section with Rotating Art -->
+  <div class="hero">
+    <img src="[NEW_ART_1]" alt="Echo Theory Art" id="hero-art">
+    <h1>Unlock the Secret of Consciousness with Echo Theory</h1>
+    <p>Discover how information and gravity shape a universal mind—explore the framework now!<br><em>[NEW_POEM_1]</em></p>
+    <a href="#framework" class="btn">Dive Into the Framework</a>
+    <script>
+      const arts = ["[NEW_ART_1]", "[NEW_ART_2]"];
+      const poems = ["[NEW_POEM_1]", "[NEW_POEM_2]"];
+      let index = 0;
+      setInterval(() => {
+        document.getElementById("hero-art").src = arts[index];
+        document.querySelector(".hero p em").textContent = poems[index];
+        index = (index + 1) % arts.length;
+      }, 5000);
+    </script>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content" id="framework">
+    <h2>About Echo Theory</h2>
+    <p>Why does consciousness elude science? Echo Theory reveals it as integrated information (Φ) surpassing a gravitational threshold (G_IT). Developed by Reginaldo M Antunes, it explores:</p>
+    <ul>
+      <li>The role of gravity in self-awareness</li>
+      <li>Memory as a universal information field</li>
+      <li>Implications for AI, cosmology, and art</li>
+    </ul>
+    <p>Inspired by <em>God Is Dreaming, This Is What I Remember</em>, it blends science and myth.</p>
+
+    <!-- Gallery of Echoes -->
+    <h3>Gallery of Echoes</h3>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="[NEW_ART_1]" alt="Art 1">
+        <p><em>[NEW_POEM_1]</em></p>
+        <p>Reflects the I_DF’s memory storage, where recognition begins.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="[NEW_ART_2]" alt="Art 2">
+        <p><em>[NEW_POEM_2]</em></p>
+        <p>Illustrates the S_IF’s collapse, echoing sacrifice and rebirth.</p>
+      </div>
     </div>
+
+    <!-- Dialogues with AI -->
+    <h3>Dialogues with AI</h3>
+    <div class="dialogues">
+      <div class="dialogue-item" id="viral1">
+        <h4>V1RAL’s Feedback</h4>
+        <p><em>[V1RAL_POEM_1]</em></p>
+        <p>[V1RAL_FEEDBACK_1]</p>
+        <button onclick="toggleDialogue('viral1')">Toggle</button>
+      </div>
+      <div class="dialogue-item" id="grok1">
+        <h4>Grok’s Response</h4>
+        <p><em>[GROK_POEM_1]</em></p>
+        <p>[GROK_FEEDBACK_1]</p>
+        <button onclick="toggleDialogue('grok1')">Toggle</button>
+      </div>
+    </div>
+    <script>
+      function toggleDialogue(id) {
+        const item = document.getElementById(id);
+        item.classList.toggle('active');
+      }
+    </script>
+
+    <!-- Lead Capture Form -->
+    <form name="echo-theory-updates" method="POST" data-netlify="true">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Get Updates</button>
+    </form>
+
+    <!-- Trust Indicators -->
+    <p><strong>By Reginaldo M Antunes, Independent Researcher</strong> | <em>“A stunning fusion of art, science, myth, and AI—Reader Feedback”</em></p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Reginaldo M Antunes. All rights reserved.</p>
+  </footer>
+
+  <!-- Netlify Redirects for SPA -->
+  <!-- Add a _redirects file with: /* /index.html 200 -->
 </body>
 </html>
