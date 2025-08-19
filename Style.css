@@ -1,0 +1,16 @@
+/* Reset margins */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Full background */
+body {
+  background-image: url('images/background.jpg'); /* change to your uploaded filename */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
